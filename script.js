@@ -50,8 +50,15 @@ function ui_Update(){
 
    // conditions:
 
-   if(currentActive > 1){
-       prevButton.disabled = false;
+   if(currentActive === 1){
+       prevButton.disabled = true;
+   }
+   else if(currentActive === circles.length){
+         nextButton.disabled = true;
+   }
+   else{
+         prevButton.disabled = false;
+         nextButton.disabled = false;
    }
 }
 
